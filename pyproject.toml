@@ -1,5 +1,5 @@
 [project]
-name = "PROJECT"
+name = "template"
 version = "0.0.1"
 description = ""
 readme = "README.md"
@@ -19,21 +19,24 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "nuitka",
+    "nuitka>=2.4.8",
+    "imageio>=2.35",
     "pytest==7.2.1",
     "flake8==6.0.0",
     "autopep8==2.0.1"
 ]
 
 [project.scripts]
-PROJECT = "PROJECT.main:main"
+template = "template.main:main"
 
 [tool.rye]
 managed = true
 dev-dependencies = [
+    "nuitka>=2.4.8",
+    "imageio>=2.35",
     "pytest==7.2.1",
     "flake8==6.0.0",
-    "autopep8==2.0.1"
+    "autopep8==2.0.1",
 ]
 
 [tool.hatch.metadata]
