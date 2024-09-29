@@ -106,7 +106,8 @@ def make_path_finder(anchor: Anchor, file_extension: str | None = None) -> Calla
         """
         file_name = f'{name}{file_extension}' if file_extension is not None else name
         path = root.joinpath(*sub_directories).joinpath(file_name)
-        return pkg.as_file(path)
+        with pkg.as_file(path) as p:
+            return p
 
     return _find_path
 
