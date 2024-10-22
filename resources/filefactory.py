@@ -124,7 +124,7 @@ def make_string_opener(anchor: Anchor, file_extension: str='txt', _encoding: flo
     Returns:
         The reusable read string function
     """
-    if not file_extension.starts_with('.'):
+    if not file_extension.startswith('.'):
          file_extension = '.' + file_extension
     root = pkg.files(anchor)
 
@@ -158,7 +158,7 @@ def make_binary_opener(anchor: Anchor, file_extension: str) -> Callable[[str, tu
     Returns:
         The reusable read bytes function
     """
-    if not file_extension.starts_with('.'):
+    if not file_extension.startswith('.'):
          file_extension = '.' + file_extension
     root = pkg.files(anchor)
 
