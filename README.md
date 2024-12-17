@@ -1,7 +1,8 @@
 A Simple Template for Python Arcade Projects
 
 ## Includes:
-- A `core` submodule for game features
+- A `core` submodule for game engine functionality
+- A `game` submodule for game content
 - A `lib` submodule for utility features
 - A `views` submodule for views
 - A `resources` module for game resources
