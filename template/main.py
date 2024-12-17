@@ -1,4 +1,4 @@
-from template.lib.application import Window
+from template.core.application import Window
 from template.views.root import RootView
 
 def main() -> None:

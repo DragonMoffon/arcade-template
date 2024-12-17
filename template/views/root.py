@@ -1,4 +1,4 @@
-from template.lib.application import View
+from template.core.application import View
 
 
 class RootView(View):

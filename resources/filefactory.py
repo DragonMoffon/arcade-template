@@ -1,9 +1,13 @@
 from typing import IO as _IO
 from collections.abc import Callable
 from pathlib import Path
-from importlib.resources import Anchor
 from contextlib import contextmanager
 import importlib.resources as pkg
+
+try:
+    from importlib.resources import Anchor
+except ImportError:
+    from importlib.resources import Package as Anchor
 
 __all__ = (
     "make_file_opener",
@@ -11,7 +15,6 @@ __all__ = (
     "make_binary_opener",
     "make_path_finder"
 )
-
 
 type IO = _IO[bytes] | _IO[str]
 
